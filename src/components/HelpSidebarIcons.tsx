@@ -239,7 +239,7 @@ export function HelpSidebarIcons(props: Props) {
                 <Mail />
               </Tippy>
             </button>
-
+            { /* }
             <a
               href="https://forum.invoiceninja.com"
               target="_blank"
@@ -286,6 +286,7 @@ export function HelpSidebarIcons(props: Props) {
                 <Info />
               </Tippy>
             </button>
+            { */ }
           </>
         )}
 

@@ -108,7 +108,7 @@ export function RecoverPassword() {
           </div>
         </div>
 
-        {isHosted() && (
+        {isHosted() && false && (
           <div className="bg-white mx-4 max-w-md w-full rounded md:shadow-lg mt-4">
             <HostedLinks />
           </div>

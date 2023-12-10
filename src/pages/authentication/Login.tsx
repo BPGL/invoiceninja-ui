@@ -162,7 +162,7 @@ export function Login() {
           </div>
         </div>
 
-        {isHosted() && (
+        {isHosted() && false && (
           <>
             <SignInProviders />
 

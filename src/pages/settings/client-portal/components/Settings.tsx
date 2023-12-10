@@ -69,7 +69,7 @@ export function Settings() {
             leftSideHelp={t('subdomain_guide')}
           >
             <SelectField
-              disabled={freePlan()}
+              disabled={freePlan() || isHosted()}
               id="portal_mode"
               value={company?.portal_mode || 'subdomain'}
               onValueChange={(value) => handleChange('portal_mode', value)}
@@ -129,9 +129,9 @@ export function Settings() {
           }
         >
           <div className="flex flex-col space-y-1">
-            <CopyToClipboard text={`${company?.portal_domain}/client/login`} />
+            <CopyToClipboard text={`${company?.portal_domain ? company?.portal_domain : (company?.subdomain ? ("https://" + company?.subdomain + ".beepro.global"): window.location.origin ) }/client/login`} />
 
-            {isHosted() && company.portal_mode === 'domain' && (
+            {isHosted() && company?.portal_mode === 'domain' && (
               <div>
                 <span>{t('app_help_link')}</span>
                 <Link

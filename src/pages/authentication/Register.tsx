@@ -193,7 +193,7 @@ export function Register() {
           </div>
         </div>
 
-        {
+        { /*
           <>
             <SignInProviders />
 
@@ -201,6 +201,7 @@ export function Register() {
               <HostedLinks />
             </div>
           </>
+          */
         }
       </div>
     </div>

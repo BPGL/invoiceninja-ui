@@ -24,7 +24,7 @@ export function isSelfHosted(): boolean {
 }
 
 export function apiEndpoint(): string {
-  if (isHosted()) {
+  if (isHosted() && false) {
     return 'https://invoicing.co';
   }
 
@@ -91,7 +91,7 @@ export function trans(key: string, replace: Record<string, unknown>) {
 }
 
 export function previewEndpoint(endpoint: string, params = {}): string {
-  if (isHosted()) {
+  if (isHosted() && false) {
     return 'https://preview.invoicing.co' + route(endpoint, params);
   }
 
